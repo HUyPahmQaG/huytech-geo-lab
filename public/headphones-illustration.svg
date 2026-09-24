@@ -1,0 +1,14 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Minh họa tai nghe chụp tai chống ồn</title>
+  <desc id="desc">Hình vẽ cách điệu màu xanh, không phải ảnh sản phẩm Sony thực tế.</desc>
+  <rect width="960" height="720" rx="48" fill="#EAF2FF"/>
+  <circle cx="480" cy="354" r="244" fill="#D8E7FF"/>
+  <path d="M282 355V311C282 201 370 112 480 112C590 112 678 201 678 311V355" stroke="#102445" stroke-width="42" stroke-linecap="round"/>
+  <rect x="230" y="323" width="142" height="251" rx="62" fill="#1263EB"/>
+  <rect x="588" y="323" width="142" height="251" rx="62" fill="#1263EB"/>
+  <rect x="265" y="365" width="72" height="166" rx="34" fill="#F7FAFF"/>
+  <rect x="623" y="365" width="72" height="166" rx="34" fill="#F7FAFF"/>
+  <path d="M373 544C415 578 545 578 587 544" stroke="#68A0FF" stroke-width="12" stroke-linecap="round" stroke-dasharray="4 28"/>
+  <circle cx="749" cy="151" r="24" fill="#2CD4A6"/>
+  <circle cx="193" cy="566" r="14" fill="#FFCB67"/>
+</svg>
