@@ -8,13 +8,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: baseUrl,
-  title: { default: `${site.name} | Tư vấn tai nghe chống ồn`, template: `%s | ${site.name}` },
+  title: { default: `${site.shortName} | Tư vấn tai nghe chống ồn`, template: `%s | ${site.shortName}` },
   description: site.description,
-  applicationName: site.name,
+  applicationName: site.shortName,
   authors: [{ name: site.author }],
   creator: site.author,
   robots: { index: allowIndexing, follow: true },
-  openGraph: { locale: site.locale, siteName: site.name, type: "website" },
+  openGraph: { locale: site.locale, siteName: site.shortName, type: "website" },
 };
 
 const organizationId = new URL("/#organization", baseUrl).toString();
@@ -34,7 +34,8 @@ const globalSchema = [
     "@type": "WebSite",
     "@id": websiteId,
     url: baseUrl.toString(),
-    name: site.name,
+    name: site.shortName,
+    alternateName: [site.name, "huytech-geo-lab.vercel.app"],
     inLanguage: "vi-VN",
     publisher: { "@id": organizationId },
   },

@@ -49,3 +49,12 @@ test("trang chính trả lời truy vấn tai nghe chống ồn cho sinh viên t
   assert.match(guide, /Tai nghe chống ồn cho sinh viên giá rẻ/);
   assert.match(guide, /HuyTech không bán hàng/);
 });
+
+test("tên website và favicon H được khai báo cho kết quả tìm kiếm", () => {
+  const layout = read("app/layout.tsx");
+  const icon = read("app/icon.tsx");
+  assert.match(layout, /name: site\.shortName/);
+  assert.match(layout, /alternateName:/);
+  assert.match(icon, /contentType = "image\/png"/);
+  assert.match(icon, />H<\/span>/);
+});
