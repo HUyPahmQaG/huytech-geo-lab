@@ -4,7 +4,7 @@ import { updatedDate } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
-    { route: "/", modified: "2026-09-25" },
+    { route: "/", modified: "2026-09-26" },
     { route: "/san-pham/sony-wh-1000xm6", modified: updatedDate },
     { route: "/so-sanh", modified: updatedDate },
     { route: "/huong-dan/chon-tai-nghe-chong-on", modified: "2026-09-25" },

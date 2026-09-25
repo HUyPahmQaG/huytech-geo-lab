@@ -6,20 +6,23 @@ import { pageMetadata } from "@/lib/seo";
 import { baseUrl } from "@/lib/config";
 import { product } from "@/data/site";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Tai nghe chống ồn cho sinh viên theo ngân sách",
-  description: "HuyTech hướng dẫn chọn tai nghe chống ồn cho sinh viên theo nhu cầu và ngân sách; có checklist, nguồn kiểm tra được và không tự tạo giá bán.",
-  path: "/",
-});
+const homeTitle = "HuyTech | Hướng dẫn chọn tai nghe giá rẻ cho sinh viên";
+const homeDescription = "HuyTech giúp sinh viên chọn tai nghe giá rẻ theo ngân sách, kiểm tra chống ồn, micro và đổi trả. Có hướng dẫn và nguồn tham khảo; không bán hàng.";
+
+export const metadata: Metadata = {
+  ...pageMetadata({ title: homeTitle, description: homeDescription, path: "/" }),
+  title: { absolute: homeTitle },
+};
 
 const homeSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": new URL("/#webpage", baseUrl).toString(),
-  name: "Tai nghe chống ồn cho sinh viên theo nhu cầu và ngân sách",
-  description: "Trang HuyTech hướng dẫn sinh viên chọn tai nghe chống ồn theo tình huống sử dụng và ngân sách.",
+  name: homeTitle,
+  description: homeDescription,
   isPartOf: { "@id": new URL("/#website", baseUrl).toString() },
-  about: { "@id": new URL(`/san-pham/${product.slug}#product`, baseUrl).toString() },
+  about: { "@type": "Thing", name: "Lựa chọn tai nghe theo ngân sách và nhu cầu học tập" },
+  mentions: { "@id": new URL(`/san-pham/${product.slug}#product`, baseUrl).toString() },
   inLanguage: "vi-VN",
 };
 
@@ -31,13 +34,13 @@ export default function HomePage() {
         <div className="container hero-grid">
           <div>
             <p className="eyebrow">Tư vấn có nguồn · Không nhận hoa hồng</p>
-            <h1>Tai nghe chống ồn cho sinh viên: chọn theo nhu cầu và ngân sách</h1>
+            <h1>HuyTech: chọn tai nghe giá rẻ phù hợp với bạn</h1>
             <p className="lede" style={{ marginTop: "1.25rem" }}>
               Nếu bạn đang tìm tai nghe chống ồn cho sinh viên giá rẻ, hãy bắt đầu từ mức ngân sách, loại tiếng ồn và thời gian đeo. HuyTech tóm tắt dữ kiện, chỉ rõ phần nhận định và không tự tạo giá bán chưa được xác minh.
             </p>
             <div className="actions">
-              <Link className="button" href="/san-pham/sony-wh-1000xm6">Xem Sony WH-1000XM6</Link>
-              <Link className="button secondary" href="/huong-dan/chon-tai-nghe-chong-on">Chọn theo ngân sách sinh viên</Link>
+              <Link className="button" href="/huong-dan/chon-tai-nghe-chong-on">Chọn theo ngân sách sinh viên</Link>
+              <Link className="button secondary" href="/san-pham/sony-wh-1000xm6">Tìm hiểu Sony WH-1000XM6</Link>
             </div>
           </div>
           <div className="hero-art">
@@ -50,6 +53,31 @@ export default function HomePage() {
             />
             <p className="image-note">Hình minh họa tự tạo, không phải ảnh sản phẩm thực tế.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="section soft">
+        <div className="container">
+          <div className="section-heading">
+            <p className="eyebrow">Tai nghe chống ồn cho sinh viên</p>
+            <h2>Chọn tai nghe giá rẻ: bắt đầu từ mức chi của bạn</h2>
+            <p className="lede">HuyTech là tên gọi ngắn của dự án học tập HuyTech GEO Lab. Chúng tôi giúp bạn so sánh nhu cầu và đọc thông số trước khi mua. Website không bán hàng hoặc công bố bảng giá chưa xác minh.</p>
+          </div>
+          <div className="grid-3">
+            <article className="card">
+              <h3>Chốt tổng ngân sách</h3>
+              <p>Ghi mức chi tối đa, gồm phí giao hàng và phụ kiện cần mua thêm. So sánh giá của cùng một mẫu và cùng điều kiện bảo hành.</p>
+            </article>
+            <article className="card">
+              <h3>Chọn tính năng bạn dùng</h3>
+              <p>Liệt kê việc học, gọi nhóm hay di chuyển. Đeo thử và gọi thử trên thiết bị của bạn trước khi trả thêm tiền cho các tính năng khác.</p>
+            </article>
+            <article className="card">
+              <h3>Kiểm tra nơi bán</h3>
+              <p>Đọc điều kiện đổi trả, thời hạn bảo hành và giá cuối cùng tại nơi bán. Lưu lại thông tin trước khi thanh toán.</p>
+            </article>
+          </div>
+          <p style={{ marginTop: "1.25rem" }}>Sony WH-1000XM6 là ví dụ để đọc thông số trên website, không phải đề xuất tai nghe giá rẻ. <Link href="/huong-dan/chon-tai-nghe-chong-on">Xem hướng dẫn chọn theo ngân sách và checklist thử tai nghe</Link>.</p>
         </div>
       </section>
 

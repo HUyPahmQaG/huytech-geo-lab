@@ -57,3 +57,16 @@ Ngày biên soạn: 22/09/2026. Phạm vi: tai nghe chống ồn cho sinh viên 
 2. Gắn nhãn “dữ liệu quan sát được”, lưu ngày và phạm vi; không đồng nhất impressions với nhu cầu toàn thị trường.
 3. Đối chiếu bộ 10 câu hỏi trong `ai-search-test-plan.md` theo nhiều thời điểm.
 4. Nâng/hạ ưu tiên dựa trên độ phù hợp với mục tiêu người dùng và bằng chứng, không chỉ dựa vào lượt hiển thị.
+
+## Truy vấn thương hiệu bổ sung ngày 26/09/2026
+
+Hai truy vấn này do chủ dự án yêu cầu, chưa có số liệu lượng tìm kiếm hoặc thứ hạng xác nhận.
+
+| Truy vấn | Trang đích | Nội dung đáp ứng |
+|---|---|---|
+| huytech | `/` | Tên HuyTech nhất quán trong title, H1, WebSite schema và og:site_name; giới thiệu tên đầy đủ HuyTech GEO Lab. |
+| huytech tai nghe giá rẻ | `/` | Hướng dẫn xác định tổng ngân sách, chọn tính năng cần dùng, kiểm tra nơi bán và liên kết tới bài hướng dẫn chi tiết. |
+
+Website hiện là nguồn hướng dẫn, không phải cửa hàng hay danh sách sản phẩm giá rẻ đã xác minh. Cụm từ khóa trong nội dung không bảo đảm được lập chỉ mục hoặc đứng đầu Google.
+
+Sau khi deploy, yêu cầu Google thu thập lại trang chủ một lần nếu chưa gửi yêu cầu cho phiên bản mới. Theo dõi báo cáo Hiệu suất trong Search Console, lọc riêng từng truy vấn và trang đích `/` để xem lượt hiển thị, lượt nhấp và vị trí trung bình khi có dữ liệu. Lưu khoảng ngày đo; không coi kết quả từ một lượt tìm hoặc truy vấn `site:` là thứ hạng của hai từ khóa này.
