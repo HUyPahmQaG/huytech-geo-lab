@@ -41,3 +41,11 @@ test("keyword research có ít nhất 20 từ khóa và 12 câu hỏi", () => {
   assert.ok((keywords.match(/^\| [^|-].+\|$/gm) ?? []).length >= 20);
   assert.ok((questions.match(/^\| [^|-].+\|$/gm) ?? []).length >= 12);
 });
+
+test("trang chính trả lời truy vấn tai nghe chống ồn cho sinh viên theo ngân sách", () => {
+  const home = read("app/page.tsx");
+  const guide = read("app/huong-dan/chon-tai-nghe-chong-on/page.tsx");
+  assert.match(home, /Tai nghe chống ồn cho sinh viên/);
+  assert.match(guide, /Tai nghe chống ồn cho sinh viên giá rẻ/);
+  assert.match(guide, /HuyTech không bán hàng/);
+});

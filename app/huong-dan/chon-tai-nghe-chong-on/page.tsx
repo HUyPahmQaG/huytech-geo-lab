@@ -6,16 +6,17 @@ import { JsonLd } from "@/components/json-ld";
 import { SourceList } from "@/components/source-list";
 import { baseUrl } from "@/lib/config";
 import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
-import { sources, updatedDate } from "@/data/site";
+import { sources } from "@/data/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Cách chọn tai nghe chống ồn cho học tập và làm việc",
-  description: "Hướng dẫn phân biệt ANC, cách âm thụ động và chất lượng micro; chọn tai nghe cho quán cà phê, họp online và di chuyển.",
+  title: "Tai nghe chống ồn cho sinh viên: cách chọn theo ngân sách",
+  description: "Hướng dẫn chọn tai nghe chống ồn cho sinh viên theo ngân sách, độ thoải mái và nhu cầu học tập; không tự nhận sản phẩm giá rẻ khi chưa có giá xác minh.",
   path: "/huong-dan/chon-tai-nghe-chong-on",
 });
 
 const path = "/huong-dan/chon-tai-nghe-chong-on";
 const faqs = [
+  { question: "Có tai nghe chống ồn cho sinh viên giá rẻ không?", answer: "Có những mẫu ở nhiều mức giá, nhưng “giá rẻ” phụ thuộc ngân sách và giá tại thời điểm mua. Hãy chốt mức chi tối đa, ưu tiên độ vừa vặn và đổi trả, rồi xác minh giá ở nhà bán uy tín; HuyTech không bán hàng và không tự điền giá chưa kiểm chứng." },
   { question: "Tai nghe chống ồn có chặn được tiếng người nói không?", answer: "Chỉ một phần. ANC thường hiệu quả hơn với âm nền đều, tần số thấp; phần đệm tai giúp cách âm thụ động thêm, nhưng không có nghĩa mọi tiếng nói sẽ biến mất." },
   { question: "Học trong quán cà phê nên chọn chụp tai hay nhét tai?", answer: "Chụp tai thường cho cảm giác bao phủ và pin dài; nhét tai gọn hơn khi di chuyển. Hãy thử độ kín, lực đeo và khả năng chịu nóng của chính bạn trước khi mua." },
   { question: "Nhiều microphone có đồng nghĩa họp tốt hơn không?", answer: "Không nhất thiết. Số lượng micro không tự quyết định chất lượng giọng nói; thuật toán, cách đeo, phòng, gió, thiết bị nguồn và ứng dụng họp đều ảnh hưởng." },
@@ -30,10 +31,10 @@ export default function GuidePage() {
       "@context": "https://schema.org",
       "@type": "Article",
       "@id": articleId,
-      headline: "Cách chọn tai nghe chống ồn cho học tập và làm việc",
-      description: "Hướng dẫn chọn tai nghe theo tiếng ồn, cách đeo, micro và tình huống sử dụng.",
+      headline: "Tai nghe chống ồn cho sinh viên: cách chọn theo ngân sách",
+      description: "Hướng dẫn chọn tai nghe theo ngân sách, tiếng ồn, cách đeo, micro và tình huống học tập.",
       datePublished: "2026-09-22",
-      dateModified: updatedDate,
+      dateModified: "2026-09-25",
       inLanguage: "vi-VN",
       mainEntityOfPage: new URL(path, baseUrl).toString(),
       author: { "@id": new URL("/#organization", baseUrl).toString() },
@@ -53,8 +54,8 @@ export default function GuidePage() {
       <header className="page-hero">
         <div className="container">
           <p className="eyebrow">Hướng dẫn nguyên bản · Không giả nhận đã thử</p>
-          <h1>Cách chọn tai nghe chống ồn cho học tập, làm việc và di chuyển</h1>
-          <p className="lede">Hãy chọn theo loại tiếng ồn, thời gian đeo, thiết bị kết nối và nhu cầu gọi họp. ANC không phải “bức tường im lặng”, còn thông số micro không thay thế phép thử thực tế.</p>
+          <h1>Tai nghe chống ồn cho sinh viên: cách chọn theo ngân sách và nhu cầu</h1>
+          <p className="lede">Hãy chọn theo mức chi, loại tiếng ồn, thời gian đeo và thiết bị kết nối. ANC không phải “bức tường im lặng”, còn nhãn “giá rẻ” chỉ có ý nghĩa khi giá và điều kiện bảo hành đã được xác minh.</p>
         </div>
       </header>
       <article className="narrow content-section prose">
@@ -68,6 +69,22 @@ export default function GuidePage() {
               <li><strong>Đeo nhiều giờ:</strong> thử lực kẹp, nhiệt, khối lượng và kích thước đệm tai.</li>
             </ul>
           </div>
+        </section>
+        <section>
+          <h2>Tai nghe chống ồn cho sinh viên giá rẻ: nên ưu tiên gì?</h2>
+          <p>Đừng chọn chỉ vì thấy chữ “giá rẻ”. Trước tiên, hãy xác định mức chi tối đa và môi trường học thường gặp, sau đó đối chiếu bốn tiêu chí dưới đây.</p>
+          <div className="table-wrap">
+            <table>
+              <thead><tr><th>Ưu tiên</th><th>Lý do</th><th>Cách kiểm tra</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Độ vừa vặn</th><td>Tai nghe rẻ nhưng gây đau hoặc nóng sẽ khó dùng lâu.</td><td>Đeo thử với kính trong ít nhất 10 phút.</td></tr>
+                <tr><th scope="row">Cách âm trước ANC</th><td>Độ kín tốt có thể giảm tiếng nói và tiếng gõ bàn phím mà không cần ANC mạnh.</td><td>Thử khi chưa bật nhạc, rồi mới bật ANC để so sánh.</td></tr>
+                <tr><th scope="row">Đổi trả và bảo hành</th><td>Giảm rủi ro nếu kích thước, pin hoặc kết nối không phù hợp.</td><td>Đọc điều kiện tại đúng nhà bán trước khi thanh toán.</td></tr>
+                <tr><th scope="row">Giá tại thời điểm mua</th><td>Giá thay đổi theo nơi bán và chương trình khuyến mại.</td><td>Đối chiếu nhiều nguồn uy tín; không xem giá cũ là giá hiện tại.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Ví dụ Sony WH-1000XM6 trên website dùng để minh họa cách đọc thông số, không được HuyTech gọi là lựa chọn giá rẻ và không phải sản phẩm do HuyTech bán.</p>
         </section>
         <section>
           <h2>ANC, cách âm thụ động và micro khác nhau thế nào?</h2>

@@ -2,6 +2,8 @@
 
 Website Next.js + TypeScript + Tailwind CSS cho bài tập GEO/Technical SEO, tư vấn tai nghe chống ồn với Sony WH-1000XM6 làm sản phẩm trọng tâm.
 
+Website production: <https://huytech-geo-lab.vercel.app/>
+
 ## Yêu cầu môi trường
 
 - Node.js `>=20.9.0` (đã phát triển với Node 24).

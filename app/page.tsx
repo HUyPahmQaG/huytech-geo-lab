@@ -7,8 +7,8 @@ import { baseUrl } from "@/lib/config";
 import { product } from "@/data/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Chọn tai nghe chống ồn theo nhu cầu",
-  description: "Tư vấn tai nghe chống ồn cho học tập, làm việc và di chuyển; trọng tâm Sony WH-1000XM6, có nguồn và giới hạn rõ ràng.",
+  title: "Tai nghe chống ồn cho sinh viên theo ngân sách",
+  description: "HuyTech hướng dẫn chọn tai nghe chống ồn cho sinh viên theo nhu cầu và ngân sách; có checklist, nguồn kiểm tra được và không tự tạo giá bán.",
   path: "/",
 });
 
@@ -16,8 +16,8 @@ const homeSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": new URL("/#webpage", baseUrl).toString(),
-  name: "Chọn tai nghe chống ồn theo nhu cầu",
-  description: "Trang tư vấn chọn tai nghe chống ồn của dự án học tập HuyTech GEO Lab.",
+  name: "Tai nghe chống ồn cho sinh viên theo nhu cầu và ngân sách",
+  description: "Trang HuyTech hướng dẫn sinh viên chọn tai nghe chống ồn theo tình huống sử dụng và ngân sách.",
   isPartOf: { "@id": new URL("/#website", baseUrl).toString() },
   about: { "@id": new URL(`/san-pham/${product.slug}#product`, baseUrl).toString() },
   inLanguage: "vi-VN",
@@ -31,13 +31,13 @@ export default function HomePage() {
         <div className="container hero-grid">
           <div>
             <p className="eyebrow">Tư vấn có nguồn · Không nhận hoa hồng</p>
-            <h1>Chọn tai nghe chống ồn theo cách bạn thật sự sử dụng</h1>
+            <h1>Tai nghe chống ồn cho sinh viên: chọn theo nhu cầu và ngân sách</h1>
             <p className="lede" style={{ marginTop: "1.25rem" }}>
-              Dành cho sinh viên và người đi làm cần tập trung khi học, họp hoặc di chuyển. Chúng tôi tóm tắt dữ kiện, chỉ rõ phần nhận định và không giả vờ đã thử sản phẩm.
+              Nếu bạn đang tìm tai nghe chống ồn cho sinh viên giá rẻ, hãy bắt đầu từ mức ngân sách, loại tiếng ồn và thời gian đeo. HuyTech tóm tắt dữ kiện, chỉ rõ phần nhận định và không tự tạo giá bán chưa được xác minh.
             </p>
             <div className="actions">
               <Link className="button" href="/san-pham/sony-wh-1000xm6">Xem Sony WH-1000XM6</Link>
-              <Link className="button secondary" href="/huong-dan/chon-tai-nghe-chong-on">Bắt đầu từ nhu cầu</Link>
+              <Link className="button secondary" href="/huong-dan/chon-tai-nghe-chong-on">Chọn theo ngân sách sinh viên</Link>
             </div>
           </div>
           <div className="hero-art">
